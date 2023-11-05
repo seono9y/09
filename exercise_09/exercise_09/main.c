@@ -10,20 +10,15 @@
 #define N_STUDENT 5
 int main(int argc, char *argv[1])
 {
-    int i, average;
-    int sum;
-    int grade [N_STUDENT];
-    printf ("input 5 scores:");
+    int i;
+    int grade[N_STUDENT];
+    int score[N_STUDENT];
     
-    sum=0;
-    for (i=0;i<N_STUDENT; i++)
-    {
-        scanf ("%d", &grade[i]);
-        sum += grade[i];
-    }
+    for(i=0;i<N_STUDENT;i++)
+        score[i] = grade[i];
     
-    average = sum / N_STUDENT;
+    for(i=0;i<N_STUDENT;i++)
+        printf("score[%d] = %d (grade:%i)\n", i, score[i], grade[i]);
     
-        printf ("score average : %i\n", average);
     return 0;
  }
